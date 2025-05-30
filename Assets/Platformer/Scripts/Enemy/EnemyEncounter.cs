@@ -11,14 +11,26 @@ public class EnemyEncounter : MonoBehaviour
 
     private bool hasTriggered = false;
 
+    TurnBaseSystem turnBaseSystem;
+
+    void Start()
+    {
+        turnBaseSystem = GameObject.Find("TurnBaseSystem").GetComponent<TurnBaseSystem>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (hasTriggered) return;
 
         if (other.CompareTag("Pembaik"))
         {
+            Debug.Log("Mulai Fight");
             hasTriggered = true;
-            StartCoroutine(StartBattle());
+
+            turnBaseSystem.StartFighting();
+            turnBaseSystem.enemy = this.GetComponent<TurnBaseCharacter>();
+
+            // StartCoroutine(StartBattle());
         }
     }
 
