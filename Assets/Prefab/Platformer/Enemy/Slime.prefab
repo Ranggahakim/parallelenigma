@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 5832247241556445052}
   - component: {fileID: 6890026311716168435}
   - component: {fileID: 2180551337643096475}
+  - component: {fileID: 6092987499356170913}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -384,6 +385,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &6092987499356170913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656370573598277616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70bda97809fb970479f4c53584fdb463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string_nama: 
+  int_hp: 0
+  int_atkDmg: 0
+  myScriptable: {fileID: 0}
 --- !u!1 &5905068843215782040
 GameObject:
   m_ObjectHideFlags: 0

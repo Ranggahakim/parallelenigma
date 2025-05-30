@@ -9,12 +9,20 @@ public class TurnBaseSystem : MonoBehaviour
     public TurnBaseCharacter enemy;
     [Header("Event Settings")]
     public UnityEvent ExecuteWhenStartFighting;
+    public UnityEvent ExecuteWhenWinning;
+    public UnityEvent ExecuteWhenLosing;
 
     [Space]
     public PertanyaanRandom[] pertanyaanRandoms;
 
     [Space]
     [Header("UI Duniawi")]
+
+    public TextMeshProUGUI playerHealth_txt;
+    public TextMeshProUGUI enemyHealth_txt;
+
+    [Space]
+
     public TextMeshProUGUI pertanyaan_txt;
     public TurnBaseButton[] turnBaseButtons;
 
@@ -29,12 +37,15 @@ public class TurnBaseSystem : MonoBehaviour
 
     public void StartFighting()
     {
-        ExecuteWhenStartFighting.Invoke();
-        MunculinPertanyaan();
-    }
 
-    public void EndFighting()
-    {
+        Time.timeScale = 0;
+
+        playerHealth_txt.text = $"player : {myCharacter.int_hp}";
+        enemyHealth_txt.text = $"enemy : {enemy.int_hp}";
+
+        ExecuteWhenStartFighting.Invoke();
+
+        MunculinPertanyaan();
 
     }
 
@@ -57,6 +68,7 @@ public class TurnBaseSystem : MonoBehaviour
             else
             {
                 tbb.answertxt.text = pertanyaanSekarang.opsi[indexOpsi];
+                tbb.isCorrectAnswer = false;
                 indexOpsi++;
             }
             indexJawaban++;
@@ -66,12 +78,37 @@ public class TurnBaseSystem : MonoBehaviour
     public void JawabanBener()
     {
         Debug.Log("Bener");
-        MunculinPertanyaan();
+
+        myCharacter.AttackTarget(enemy);
+        enemyHealth_txt.text = $"enemy : {enemy.int_hp}";
+
+        if (enemy.int_hp <= 0)
+        {
+            Destroy(enemy.gameObject);
+            Time.timeScale = 1;
+            ExecuteWhenWinning.Invoke();
+        }
+        else
+        {
+            MunculinPertanyaan();
+        }
+
     }
 
     public void JawabanSalah()
     {
         Debug.Log("Salah");
-        MunculinPertanyaan();
+
+        enemy.AttackTarget(myCharacter);
+        playerHealth_txt.text = $"player : {myCharacter.int_hp}";
+
+        if (myCharacter.int_hp <= 0)
+        {
+            ExecuteWhenLosing.Invoke();
+        }
+        else
+        {
+            MunculinPertanyaan();
+        }
     }
 }

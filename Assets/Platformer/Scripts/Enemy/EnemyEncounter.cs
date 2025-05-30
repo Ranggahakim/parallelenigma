@@ -27,8 +27,8 @@ public class EnemyEncounter : MonoBehaviour
             Debug.Log("Mulai Fight");
             hasTriggered = true;
 
-            turnBaseSystem.StartFighting();
             turnBaseSystem.enemy = this.GetComponent<TurnBaseCharacter>();
+            turnBaseSystem.StartFighting();
 
             // StartCoroutine(StartBattle());
         }

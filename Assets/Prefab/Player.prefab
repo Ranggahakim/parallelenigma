@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7051521819490602800}
   - component: {fileID: 713689697214365799}
   - component: {fileID: 1387621366103917008}
+  - component: {fileID: 119452115560719784}
   m_Layer: 0
   m_Name: Player
   m_TagString: Pembaik
@@ -268,6 +269,22 @@ MonoBehaviour:
   canMove: 1
   isLanding: 0
   isDownDashing: 0
+--- !u!114 &119452115560719784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667126924444378217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70bda97809fb970479f4c53584fdb463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string_nama: 
+  int_hp: 0
+  int_atkDmg: 0
+  myScriptable: {fileID: 11400000, guid: 5e5f8771ec7912847b65542fb627b3f1, type: 2}
 --- !u!1 &1190316900071063075
 GameObject:
   m_ObjectHideFlags: 0
