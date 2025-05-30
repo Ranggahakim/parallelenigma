@@ -11,12 +11,7 @@ public class EnemyEncounter : MonoBehaviour
 
     private bool hasTriggered = false;
 
-    TurnBaseSystem turnBaseSystem;
-
-    void Start()
-    {
-        turnBaseSystem = GameObject.Find("TurnBaseSystem").GetComponent<TurnBaseSystem>();
-    }
+    public temporaryDataForTurnBase tmpData;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,11 +22,19 @@ public class EnemyEncounter : MonoBehaviour
             Debug.Log("Mulai Fight");
             hasTriggered = true;
 
-            turnBaseSystem.enemy = this.GetComponent<TurnBaseCharacter>();
-            turnBaseSystem.StartFighting();
+            SetDataInTemporary();
 
-            // StartCoroutine(StartBattle());
+            SceneManager.LoadScene("TurnBased1");
         }
+    }
+
+    void SetDataInTemporary()
+    {
+        TurnBaseCharacter thisEnemy = gameObject.GetComponent<TurnBaseCharacter>();
+
+        tmpData.int_atkDmgEnemy = thisEnemy.int_atkDmg;
+        tmpData.int_hpEnemy = thisEnemy.int_hp;
+        tmpData.string_namaEnemy = thisEnemy.string_nama;
     }
 
     IEnumerator StartBattle()

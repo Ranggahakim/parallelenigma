@@ -1,9 +1,12 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class TurnBaseSystem : MonoBehaviour
 {
+    public temporaryDataForTurnBase tmpData;
     [Header("Character")]
     public TurnBaseCharacter myCharacter;
     public TurnBaseCharacter enemy;
@@ -29,17 +32,28 @@ public class TurnBaseSystem : MonoBehaviour
     void Start()
     {
         myCharacter = GameObject.FindWithTag("Pembaik").GetComponent<TurnBaseCharacter>();
+        enemy = GameObject.Find("enemy").GetComponent<TurnBaseCharacter>();
+
         foreach (TurnBaseButton tbb in turnBaseButtons)
         {
             tbb.myTurnBaseSystem = this;
         }
+
+        SetVariableOfEnemy();
+
+        StartFighting();
+    }
+
+    void SetVariableOfEnemy()
+    {
+
+        enemy.int_atkDmg = tmpData.int_atkDmgEnemy;
+        enemy.int_hp = tmpData.int_hpEnemy;
+        enemy.string_nama = tmpData.string_namaEnemy;
     }
 
     public void StartFighting()
     {
-
-        Time.timeScale = 0;
-
         playerHealth_txt.text = $"player : {myCharacter.int_hp}";
         enemyHealth_txt.text = $"enemy : {enemy.int_hp}";
 
@@ -85,7 +99,7 @@ public class TurnBaseSystem : MonoBehaviour
         if (enemy.int_hp <= 0)
         {
             Destroy(enemy.gameObject);
-            Time.timeScale = 1;
+            SceneManager.LoadScene("Platformer1");
             ExecuteWhenWinning.Invoke();
         }
         else

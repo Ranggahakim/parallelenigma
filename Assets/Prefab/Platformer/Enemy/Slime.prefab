@@ -339,6 +339,7 @@ MonoBehaviour:
   turnBasedSceneName: TurnBased1
   enemyId: EnemyA
   animator: {fileID: 6417427024400540416}
+  tmpData: {fileID: 11400000, guid: 0ba29467b1ccdae4eb91da13c5b40fb6, type: 2}
 --- !u!61 &2180551337643096475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -401,6 +402,7 @@ MonoBehaviour:
   int_hp: 0
   int_atkDmg: 0
   myScriptable: {fileID: 0}
+  myAnimator: {fileID: 0}
 --- !u!1 &5905068843215782040
 GameObject:
   m_ObjectHideFlags: 0
