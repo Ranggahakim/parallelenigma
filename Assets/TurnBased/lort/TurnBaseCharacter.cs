@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class TurnBaseCharacter : MonoBehaviour
 {
@@ -10,6 +12,19 @@ public class TurnBaseCharacter : MonoBehaviour
     public Animator myAnimator;
 
     public int uniqueCode;
+
+    [Space]
+    [Header("Enemy Type")]
+    public EnemyType enemyType;
+    public EnemyMeshAnim[] enemyMeshAnims;
+
+    [System.Serializable]
+    public class EnemyMeshAnim
+    {
+        public EnemyType enemyType;
+        public GameObject gameObject;
+        public Animator animator;
+    }
 
     void Start()
     {
@@ -23,6 +38,26 @@ public class TurnBaseCharacter : MonoBehaviour
             string_nama = myScriptable.string_nama;
             int_hp = myScriptable.int_hp;
             int_atkDmg = myScriptable.int_atkDmg;
+            enemyType = myScriptable.enemyType;
+        }
+    }
+
+    public void SetupEnemy()
+    {
+        if (enemyMeshAnims.Length > 0)
+        {
+            foreach (EnemyMeshAnim ema in enemyMeshAnims)
+            {
+                if (ema.enemyType == enemyType)
+                {
+                    ema.gameObject.SetActive(true);
+                    myAnimator = ema.animator;
+                }
+                else
+                {
+                    ema.gameObject.SetActive(false);
+                }
+            }
         }
     }
 

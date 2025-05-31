@@ -14,6 +14,7 @@ public class temporaryDataForTurnBase : ScriptableObject
     public string string_namaEnemy;
     public int int_hpEnemy;
     public int int_atkDmgEnemy;
+    public EnemyType enemyType;
 
     [Header("Enemies")]
     public List<int> losingEnemies;

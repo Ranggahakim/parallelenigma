@@ -36,11 +36,12 @@ public class GameMasterCode : MonoBehaviour
         SceneTransitionManager.instance.OnSceneLoaded();
     }
 
-    public void SetupDataOfEnemy(int int_atkDmg, int int_hpEnemy, string string_namaEnemy)
+    public void SetupDataOfEnemy(int int_atkDmg, int int_hpEnemy, string string_namaEnemy, EnemyType enemyType)
     {
         tmpData.int_atkDmgEnemy = int_atkDmg;
         tmpData.int_hpEnemy = int_hpEnemy;
         tmpData.string_namaEnemy = string_namaEnemy;
+        tmpData.enemyType = enemyType;
     }
 
     public void SetupDataOfPlayerLocation(float x, float y, float z)

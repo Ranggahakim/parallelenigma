@@ -41,7 +41,7 @@ public class EnemyEncounter : MonoBehaviour
     {
         TurnBaseCharacter thisEnemy = gameObject.GetComponent<TurnBaseCharacter>();
 
-        myGm.SetupDataOfEnemy(thisEnemy.int_atkDmg, thisEnemy.int_hp, thisEnemy.string_nama);
+        myGm.SetupDataOfEnemy(thisEnemy.int_atkDmg, thisEnemy.int_hp, thisEnemy.string_nama, thisEnemy.enemyType);
         myGm.SetupDataOfPlayerLocation(player.transform.position.x, player.transform.position.y, player.transform.position.z);
     }
 }

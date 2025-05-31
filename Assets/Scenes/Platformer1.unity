@@ -132,18 +132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1530928478}
     m_Modifications:
-    - target: {fileID: 3089251702004597139, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.8
+    - target: {fileID: 5595984636151072519, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: uniqueCode
+      value: 12314
       objectReference: {fileID: 0}
-    - target: {fileID: 4376920679796564470, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376920679796564470, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.33
-      objectReference: {fileID: 0}
+    - target: {fileID: 5595984636151072519, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: myScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f311d9e85b09bb45912607c27f0e29f, type: 2}
     - target: {fileID: 5886891439772773236, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.91
@@ -188,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slimeg
       objectReference: {fileID: 0}
+    - target: {fileID: 9095360556953528439, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1563149600}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -213,6 +213,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -5.89
       objectReference: {fileID: 0}
+    - target: {fileID: 5595984636151072519, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: uniqueCode
+      value: 123422
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595984636151072519, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: myScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f311d9e85b09bb45912607c27f0e29f, type: 2}
     - target: {fileID: 5886891439772773236, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.75
@@ -3778,6 +3786,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4a8555311283e47abed1be007128fd, type: 3}
+--- !u!95 &1563149600 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6417427024400540416, guid: 3a4a8555311283e47abed1be007128fd, type: 3}
+  m_PrefabInstance: {fileID: 1563149599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1626911918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5832247241556445052, guid: 3a4a8555311283e47abed1be007128fd, type: 3}
@@ -30907,6 +30920,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -4.29
       objectReference: {fileID: 0}
+    - target: {fileID: 5595984636151072519, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: uniqueCode
+      value: 513123
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595984636151072519, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
+      propertyPath: myScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f311d9e85b09bb45912607c27f0e29f, type: 2}
     - target: {fileID: 5886891439772773236, guid: c4a590410d2bcc741b849b8c9071eb36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.63

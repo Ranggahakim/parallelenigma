@@ -6,6 +6,7 @@ public class CharacterScriptable : ScriptableObject
     public string string_nama;
     public int int_hp;
     public int int_atkDmg;
+    public EnemyType enemyType;
 
     private void OnValidate()
     {
@@ -14,4 +15,11 @@ public class CharacterScriptable : ScriptableObject
         string_nama = name;
 #endif
     }
+}
+
+public enum EnemyType
+{
+    kecil,
+    sedang,
+    besar
 }

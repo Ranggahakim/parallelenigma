@@ -42,6 +42,7 @@ public class TurnBaseSystem : MonoBehaviour
         SetVariableOfEnemy();
 
         StartFighting();
+        enemy.SetupEnemy();
         SceneTransitionManager.instance.OnSceneLoaded();
     }
 
@@ -51,6 +52,7 @@ public class TurnBaseSystem : MonoBehaviour
         enemy.int_atkDmg = tmpData.int_atkDmgEnemy;
         enemy.int_hp = tmpData.int_hpEnemy;
         enemy.string_nama = tmpData.string_namaEnemy;
+        enemy.enemyType = tmpData.enemyType;
     }
 
     public void StartFighting()
