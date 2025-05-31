@@ -42,6 +42,7 @@ public class TurnBaseSystem : MonoBehaviour
         SetVariableOfEnemy();
 
         StartFighting();
+        SceneTransitionManager.instance.OnSceneLoaded();
     }
 
     void SetVariableOfEnemy()
@@ -100,7 +101,7 @@ public class TurnBaseSystem : MonoBehaviour
         {
             enemy.gameObject.SetActive(false);
             tmpData.isContinue = true;
-            SceneManager.LoadScene("Platformer1");
+            SceneTransitionManager.instance.TransitionToScene("Platformer1");
             ExecuteWhenWinning.Invoke();
         }
         else

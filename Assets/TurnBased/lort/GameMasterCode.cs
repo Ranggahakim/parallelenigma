@@ -31,6 +31,11 @@ public class GameMasterCode : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        SceneTransitionManager.instance.OnSceneLoaded();
+    }
+
     public void SetupDataOfEnemy(int int_atkDmg, int int_hpEnemy, string string_namaEnemy)
     {
         tmpData.int_atkDmgEnemy = int_atkDmg;

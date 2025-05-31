@@ -32,7 +32,7 @@ public class EnemyEncounter : MonoBehaviour
             SetDataInTemporary();
 
             myGm.tmpData.losingEnemies.Add(gameObject.GetComponent<TurnBaseCharacter>().uniqueCode);
-            SceneManager.LoadScene("TurnBased1");
+            SceneTransitionManager.instance.TransitionToScene("TurnBased1");
         }
     }
 
@@ -43,13 +43,5 @@ public class EnemyEncounter : MonoBehaviour
 
         myGm.SetupDataOfEnemy(thisEnemy.int_atkDmg, thisEnemy.int_hp, thisEnemy.string_nama);
         myGm.SetupDataOfPlayerLocation(player.transform.position.x, player.transform.position.y, player.transform.position.z);
-    }
-
-    IEnumerator StartBattle()
-    {
-        Debug.Log("AMBUSHED!");
-        SceneTransitionManager.instance.enemyToSpawnId = enemyId;
-        yield return new WaitForSeconds(0.2f);
-        SceneTransitionManager.instance.TransitionToScene(turnBasedSceneName);
     }
 }

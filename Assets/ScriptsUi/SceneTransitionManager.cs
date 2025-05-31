@@ -38,7 +38,7 @@ public class SceneTransitionManager : MonoBehaviour
             wiper.anchoredPosition = new Vector2(-2100f, 0f);
             animator.Update(0);
         }
-        
+
         animator.SetTrigger("WipeIn");
     }
 
