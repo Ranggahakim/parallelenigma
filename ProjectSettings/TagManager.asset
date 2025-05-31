@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Pembaik
+  - gm
   layers:
   - Default
   - TransparentFX

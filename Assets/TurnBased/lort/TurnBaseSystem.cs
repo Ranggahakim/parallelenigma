@@ -98,7 +98,8 @@ public class TurnBaseSystem : MonoBehaviour
 
         if (enemy.int_hp <= 0)
         {
-            Destroy(enemy.gameObject);
+            enemy.gameObject.SetActive(false);
+            tmpData.isContinue = true;
             SceneManager.LoadScene("Platformer1");
             ExecuteWhenWinning.Invoke();
         }
@@ -119,6 +120,7 @@ public class TurnBaseSystem : MonoBehaviour
         if (myCharacter.int_hp <= 0)
         {
             ExecuteWhenLosing.Invoke();
+            tmpData.isContinue = false;
         }
         else
         {

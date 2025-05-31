@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3282db0f15e9b4fa90e88cd9af2e67, type: 3}
   m_Name: temporaryDataForTurnBase
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  isContinue: 1
+  px: -1.5000043
+  py: -6.486916
+  pz: 0
+  currentEnemy: {fileID: 0}
+  string_namaEnemy: enemy 1
+  int_hpEnemy: 50
+  int_atkDmgEnemy: 10
+  losingEnemies: []

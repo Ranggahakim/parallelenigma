@@ -11,7 +11,14 @@ public class EnemyEncounter : MonoBehaviour
 
     private bool hasTriggered = false;
 
-    public temporaryDataForTurnBase tmpData;
+    public GameMasterCode myGm;
+    public GameObject player;
+
+    void Start()
+    {
+        myGm = GameObject.FindWithTag("gm").GetComponent<GameMasterCode>();
+        player = GameObject.FindWithTag("Pembaik");
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,17 +31,18 @@ public class EnemyEncounter : MonoBehaviour
 
             SetDataInTemporary();
 
+            myGm.tmpData.losingEnemies.Add(gameObject.GetComponent<TurnBaseCharacter>().uniqueCode);
             SceneManager.LoadScene("TurnBased1");
         }
     }
+
 
     void SetDataInTemporary()
     {
         TurnBaseCharacter thisEnemy = gameObject.GetComponent<TurnBaseCharacter>();
 
-        tmpData.int_atkDmgEnemy = thisEnemy.int_atkDmg;
-        tmpData.int_hpEnemy = thisEnemy.int_hp;
-        tmpData.string_namaEnemy = thisEnemy.string_nama;
+        myGm.SetupDataOfEnemy(thisEnemy.int_atkDmg, thisEnemy.int_hp, thisEnemy.string_nama);
+        myGm.SetupDataOfPlayerLocation(player.transform.position.x, player.transform.position.y, player.transform.position.z);
     }
 
     IEnumerator StartBattle()
