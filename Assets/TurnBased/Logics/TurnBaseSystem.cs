@@ -123,7 +123,7 @@ public class TurnBaseSystem : MonoBehaviour
 
         if (myCharacter.int_hp <= 0)
         {
-            tmpData.isContinue = false;
+            tmpData.ResetData();
             SceneTransitionManager.instance.TransitionToScene("GameOver");
         }
         else

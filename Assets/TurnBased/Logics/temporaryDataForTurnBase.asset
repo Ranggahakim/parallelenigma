@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: temporaryDataForTurnBase
   m_EditorClassIdentifier: 
   isContinue: 1
-  px: -8
-  py: 0
+  px: 6.1599965
+  py: -6.206917
   pz: 0
   string_namaEnemy: enemy 1
   int_hpEnemy: 50
   int_atkDmgEnemy: 10
-  losingEnemies: 
+  losingEnemies: 7b0000007b000000

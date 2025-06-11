@@ -17,4 +17,13 @@ public class temporaryDataForTurnBase : ScriptableObject
 
     [Header("Enemies")]
     public List<int> losingEnemies;
+
+    public void ResetData()
+    {
+        px = 0;
+        py = 0;
+        pz = 0;
+        losingEnemies.Clear();
+        isContinue = false;
+    }
 }
