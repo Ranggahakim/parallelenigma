@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: temporaryDataForTurnBase
   m_EditorClassIdentifier: 
   isContinue: 1
-  px: -1.5000043
-  py: -6.486916
+  px: -8
+  py: 0
   pz: 0
-  currentEnemy: {fileID: 0}
   string_namaEnemy: enemy 1
   int_hpEnemy: 50
   int_atkDmgEnemy: 10
-  losingEnemies: []
+  losingEnemies: 
