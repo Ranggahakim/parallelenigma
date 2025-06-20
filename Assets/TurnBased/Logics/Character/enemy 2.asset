@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: enemy 2
   m_EditorClassIdentifier: 
   string_nama: enemy 2
-  int_hp: 100
+  int_hp: 20
   int_atkDmg: 5

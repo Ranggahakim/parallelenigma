@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 823fcac5c52454a4c8d7e0f4937deb89
+guid: 3b314914b64610841bd9c9ab73a100a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7168540986364394743
-    second: sign_0
+      213: 5296115440054229922
+    second: theend_0
+  - first:
+      213: -8855559864207878310
+    second: theend_1
+  - first:
+      213: -1474439409926884990
+    second: theend_2
+  - first:
+      213: -7557118722190078267
+    second: theend_3
+  - first:
+      213: -687629189531454000
+    second: theend_4
+  - first:
+      213: 4197225216802386902
+    second: theend_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sign_0
+      name: theend_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
-        width: 40
-        height: 43
+        x: 6
+        y: 50
+        width: 51
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +156,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fcf31aeb06cb7360800000000000000
-      internalID: 7168540986364394743
+      spriteID: 2abd4e5cee49f7940800000000000000
+      internalID: 5296115440054229922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theend_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 50
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57dea6e83bba1580800000000000000
+      internalID: -8855559864207878310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theend_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 50
+        width: 51
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281b8782b2db98be0800000000000000
+      internalID: -1474439409926884990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theend_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 50
+        width: 51
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce086ebf88bf1790800000000000000
+      internalID: -7557118722190078267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theend_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 50
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5b9c435ec0576f0800000000000000
+      internalID: -687629189531454000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theend_5
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 50
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d371d9c81a8f3a30800000000000000
+      internalID: 4197225216802386902
       vertices: []
       indices: 
       edges: []
@@ -161,7 +286,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sign_0: 7168540986364394743
+      theend_0: 5296115440054229922
+      theend_1: -8855559864207878310
+      theend_2: -1474439409926884990
+      theend_3: -7557118722190078267
+      theend_4: -687629189531454000
+      theend_5: 4197225216802386902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

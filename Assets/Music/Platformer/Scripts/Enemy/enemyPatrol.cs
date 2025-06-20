@@ -26,7 +26,6 @@ public class enemyPatrol : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 point = currentPoint.position - transform.position;
         if (currentPoint == pointB.transform)
         {
             rb.linearVelocity = new Vector2(speed, 0);

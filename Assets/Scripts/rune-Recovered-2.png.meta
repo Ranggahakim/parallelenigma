@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 823fcac5c52454a4c8d7e0f4937deb89
+guid: 275880e8b025a27409c8505804f759f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7168540986364394743
-    second: sign_0
+      213: 2499701893923709168
+    second: rune-Recovered-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sign_0
+      name: rune-Recovered-2_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 0
         y: 0
-        width: 40
-        height: 43
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fcf31aeb06cb7360800000000000000
-      internalID: 7168540986364394743
+      spriteID: 0f0a1b7e0a9b0b220800000000000000
+      internalID: 2499701893923709168
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ca3e10bca5cc3e644baf5e5233a508eb
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sign_0: 7168540986364394743
+      rune-Recovered-2_0: 2499701893923709168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

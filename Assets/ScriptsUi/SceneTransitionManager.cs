@@ -15,17 +15,25 @@ public class SceneTransitionManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log($"SceneTransitionManager Awake() called on GameObject: {gameObject.name}");
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log($"<color=green>Singleton instance created.</color>");
         }
         else
         {
+            Debug.Log($"<color=orange>Duplicate instance found. Destroying self.</color>");
             Destroy(gameObject);
         }
     }
 
+    void OnDestroy()
+    {
+        Debug.Log($"<color=red>SceneTransitionManager OnDestroy() called on GameObject: {gameObject.name}</color>");
+    }
+    
     public void TransitionToScene(string sceneName)
     {
         targetScene = sceneName;
@@ -38,7 +46,7 @@ public class SceneTransitionManager : MonoBehaviour
             wiper.anchoredPosition = new Vector2(-2100f, 0f);
             animator.Update(0);
         }
-        
+
         animator.SetTrigger("WipeIn");
     }
 

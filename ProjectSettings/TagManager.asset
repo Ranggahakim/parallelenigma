@@ -8,6 +8,7 @@ TagManager:
   - Pembaik
   - gm
   - Wall
+  - Audio
   layers:
   - Default
   - TransparentFX

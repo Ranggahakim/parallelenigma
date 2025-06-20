@@ -31,8 +31,11 @@ public class TurnBaseSystem : MonoBehaviour
 
     //private SceneTransitionManager sceneTransitionManager;
 
+    //Sound sound;
+
     void Start()
     {
+        //sound = GameObject.FindGameObjectWithTag("Audio").GetComponent<Sound>();
         myCharacter = GameObject.FindWithTag("Pembaik").GetComponent<TurnBaseCharacter>();
         enemy = GameObject.Find("enemy").GetComponent<TurnBaseCharacter>();
 
@@ -40,6 +43,7 @@ public class TurnBaseSystem : MonoBehaviour
         {
             tbb.myTurnBaseSystem = this;
         }
+        playerHealth_txt.text = $"{myCharacter.int_hp}";
 
         SetVariableOfEnemy();
 
@@ -49,7 +53,7 @@ public class TurnBaseSystem : MonoBehaviour
 
     void SetVariableOfEnemy()
     {
-
+        enemy.uniqueCode = tmpData.uniqueCode;
         enemy.int_atkDmg = tmpData.int_atkDmgEnemy;
         enemy.int_hp = tmpData.int_hpEnemy;
         enemy.string_nama = tmpData.string_namaEnemy;
@@ -57,7 +61,6 @@ public class TurnBaseSystem : MonoBehaviour
 
     public void StartFighting()
     {
-        playerHealth_txt.text = $"{myCharacter.int_hp}";
         enemyHealth_txt.text = $"{enemy.int_hp}";
 
         ExecuteWhenStartFighting.Invoke();
@@ -103,6 +106,7 @@ public class TurnBaseSystem : MonoBehaviour
         {
             enemy.gameObject.SetActive(false);
             tmpData.isContinue = true;
+            tmpData.losingEnemies.Add(enemy.uniqueCode);
             SceneManager.LoadScene("Platformer1");
             SceneTransitionManager.instance.TransitionToScene("Platformer1");
             ExecuteWhenWinning.Invoke();
@@ -124,7 +128,8 @@ public class TurnBaseSystem : MonoBehaviour
         if (myCharacter.int_hp <= 0)
         {
             tmpData.ResetData();
-            SceneTransitionManager.instance.TransitionToScene("GameOver");
+            //sound.PlaySFX(sound.sfxGameOver);
+            SceneManager.LoadScene("GameOver");
         }
         else
         {

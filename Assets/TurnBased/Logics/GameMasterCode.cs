@@ -10,29 +10,57 @@ public class GameMasterCode : MonoBehaviour
     public GameObject[] enemies;
 
     void Awake()
+{
+    if (tmpData == null)
     {
-        if (tmpData.isContinue)
+        Debug.LogError($"[{name}] tmpData is not assigned! Aborting Awake.");
+        return;
+    }
+
+    if (!tmpData.isContinue)
+        return;
+
+    enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+    if (tmpData.losingEnemies == null)
+    {
+        Debug.LogWarning("losingEnemies list is null—nothing to deactivate.");
+    }
+    else
+    {
+        foreach (GameObject enemy in enemies)
         {
+            if (enemy == null) 
+                continue;
 
-            enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-
-            foreach (GameObject enemy in enemies)
+            var tbc = enemy.GetComponent<TurnBaseCharacter>();
+            if (tbc == null)
             {
-
-                if (tmpData.losingEnemies.Contains(enemy.GetComponent<TurnBaseCharacter>().uniqueCode))
-                {
-                    enemy.SetActive(false);
-                }
+                Debug.LogWarning(
+                  $"Enemy '{enemy.name}' has no TurnBaseCharacter script attached.");
+                continue;
             }
 
-
-            player.transform.position = new Vector3(tmpData.px, tmpData.py, tmpData.pz);
+            if (tmpData.losingEnemies.Contains(tbc.uniqueCode))
+                enemy.SetActive(false);
         }
     }
 
-    public void SetupDataOfEnemy(int int_atkDmg, int int_hpEnemy, string string_namaEnemy)
+    if (player != null)
     {
+        player.transform.position =
+          new Vector3(tmpData.px, tmpData.py, tmpData.pz);
+    }
+    else
+    {
+        Debug.LogError("Player reference not set on GameMasterCode!");
+    }
+}
+
+
+    public void SetupDataOfEnemy(int uniqueCode, int int_atkDmg, int int_hpEnemy, string string_namaEnemy)
+    {
+        tmpData.uniqueCode = uniqueCode;
         tmpData.int_atkDmgEnemy = int_atkDmg;
         tmpData.int_hpEnemy = int_hpEnemy;
         tmpData.string_namaEnemy = string_namaEnemy;

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 185f287d00d99c04fbe5fef7e7f5e3b1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - batuA: {fileID: 2166858222494995661, guid: 71264b6dcc2d3ae41b2e488f47458103, type: 3}
+  - batuB: {fileID: 2166858222494995661, guid: 71264b6dcc2d3ae41b2e488f47458103, type: 3}
+  - batuC: {fileID: 2166858222494995661, guid: 71264b6dcc2d3ae41b2e488f47458103, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
