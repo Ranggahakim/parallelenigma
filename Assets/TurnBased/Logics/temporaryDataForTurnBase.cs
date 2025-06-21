@@ -19,6 +19,10 @@ public class temporaryDataForTurnBase : ScriptableObject
     [Header("Enemies")]
     public List<int> losingEnemies;
 
+    [Header("Collectible Objects")]
+    public List<Sprite> collectibleObjects;
+    public List<int> objectInMap;
+
     public void ResetData()
     {
         px = 0;
@@ -26,5 +30,7 @@ public class temporaryDataForTurnBase : ScriptableObject
         pz = 0;
         losingEnemies.Clear();
         isContinue = false;
+        collectibleObjects.Clear();
+        objectInMap.Clear();
     }
 }

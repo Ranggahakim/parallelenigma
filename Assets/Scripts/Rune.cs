@@ -5,6 +5,8 @@ public class Rune : MonoBehaviour
 {
     public Sprite sprite;
     Sound sound;
+    public int uniqueCode;
+    public temporaryDataForTurnBase tmp;
 
     private void Awake()
     {
@@ -15,8 +17,9 @@ public class Rune : MonoBehaviour
         if (other.CompareTag("Pembaik"))
         {
             sound.PlaySFX(sound.sfxCollectItem);
-            SpriteCollector.instance.CollectSprite(sprite);
+            SpriteCollector.instance.CollectSprite(sprite, false);
             Debug.Log("destroy");
+            tmp.objectInMap.Add(uniqueCode);
 
             Destroy(gameObject);
         }

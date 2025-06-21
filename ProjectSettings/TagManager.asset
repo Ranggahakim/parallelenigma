@@ -9,6 +9,7 @@ TagManager:
   - gm
   - Wall
   - Audio
+  - rune
   layers:
   - Default
   - TransparentFX
